@@ -96,14 +96,16 @@ export default {
 <style scoped>
 h1 {
   color: blue;
+  font-family: "sans-serif";
 }
 
 body{
  background-color: #f2f2f2;
   color: #333333;
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-family: "sans-serif";
+  font-size:20px;
 }
 
 .form-group {
@@ -136,6 +138,7 @@ body{
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-family: "sans-serif";
 }
 
 .btn-agregar:hover,
