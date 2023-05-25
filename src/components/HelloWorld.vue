@@ -1,39 +1,43 @@
 <template>
-  <div>
+  <body>
     <h1>Lista de Personas</h1>
-    <div>
+    <section class="section">
       <label>Nombre:</label>
       <input v-model="nuevoNombre" type="text">
-    </div>
-    <div>
+    </section>
+    <br>
+    <section class="section">
       <label>Apellido:</label>
       <input v-model="nuevoApellido" type="text">
-    </div>
-    <div>
+    </section>
+    <br>
+    <section class="section">
       <label>Edad:</label>
       <input v-model.number="nuevaEdad" type="number">
-    </div>
-    <div>
+    </section>
+    <br>
+    <section class="section">
       <label>Cedula:</label>
       <input v-model="nuevaCedula" type="text">
-    </div>
-    <button @click="agregarPersona">Agregar Persona</button>
+    </section>
+    <br>
+    <button class="btn-agregar" @click="agregarPersona">Agregar Persona</button>
     <ul>
       <li v-for="(persona, index) in personas" :key="index">
         {{ persona.nombre }} {{ persona.apellido }} - Edad: {{ persona.edad }} - Cedula: {{ persona.cedula }}
-        <button @click="eliminarPersona(index)">Eliminar</button>
+        <button class="btn-agregar" @click="eliminarPersona(index)">Eliminar</button>
       </li>
     </ul>
-    <div>
+    <p>
       Total de personas: {{ personas.length }}
-    </div>
-    <div>
+    </p>
+    <p>
       Personas mayores de edad: {{ contadorMayoresEdad }}
-    </div>
-    <div>
+    </p>
+    <p>
       Personas menores de edad: {{ contadorMenoresEdad }}
-    </div>
-  </div>
+    </p>
+  </body>
 </template>
 
 <script>
@@ -94,6 +98,14 @@ h1 {
   color: blue;
 }
 
+body{
+ background-color: #f2f2f2;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .form-group {
   margin-bottom: 10px;
 }
@@ -116,16 +128,27 @@ h1 {
 
 .btn-agregar,
 .btn-eliminar {
-  padding: 8px 16px;
-  border: 50px;
-  background-color: #4caf50;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
   color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 .btn-agregar:hover,
 .btn-eliminar:hover {
   background-color: #45a049;
+}
+
+.section{
+
+  color: blue;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content:left;
 }
 
 </style>
