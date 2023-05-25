@@ -23,8 +23,10 @@
     <br>
     <button class="btn-agregar" @click="agregarPersona">Agregar Persona</button>
     <ul>
+    
       <li v-for="(persona, index) in personas" :key="index">
         {{ persona.nombre }} {{ persona.apellido }} - Edad: {{ persona.edad }} - Cedula: {{ persona.cedula }}
+        <br>
         <button class="btn-agregar" @click="eliminarPersona(index)">Eliminar</button>
       </li>
     </ul>
